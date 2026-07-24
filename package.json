@@ -2,41 +2,19 @@
   "name": "260803-storybook",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
+  "workspaces": [
+    "demos/*"
+  ],
   "scripts": {
-    "dev": "vite",
-    "build": "npm run build:clean && npm run build:app && npm run build:storybook && npm run build:landing",
+    "dev": "npm run dev -w notice-list",
+    "storybook": "npm run storybook -w notice-list",
+    "storybook:patterns": "npm run storybook -w patterns",
+    "build": "npm run build:clean && npm run build -w notice-list && npm run build -w patterns && npm run build:landing",
     "build:clean": "rm -rf dist",
-    "build:app": "tsc -b && vite build",
-    "build:storybook": "storybook build -o dist/storybook",
     "build:landing": "node scripts/copy-landing.mjs",
-    "lint": "oxlint",
-    "preview": "vite preview",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build -o dist/storybook"
-  },
-  "dependencies": {
-    "react": "^19.2.7",
-    "react-dom": "^19.2.7"
+    "lint": "oxlint demos"
   },
   "devDependencies": {
-    "@chromatic-com/storybook": "^5.2.1",
-    "@storybook/addon-a11y": "10.5.0",
-    "@storybook/addon-docs": "10.5.0",
-    "@storybook/addon-mcp": "^0.7.0",
-    "@storybook/addon-vitest": "10.5.0",
-    "@storybook/react-vite": "10.5.0",
-    "@types/node": "^24.13.2",
-    "@types/react": "^19.2.17",
-    "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react": "^6.0.3",
-    "@vitest/browser-playwright": "^4.1.10",
-    "@vitest/coverage-v8": "^4.1.10",
-    "oxlint": "^1.71.0",
-    "playwright": "^1.61.1",
-    "storybook": "10.5.0",
-    "typescript": "~6.0.2",
-    "vite": "^8.1.1",
-    "vitest": "^4.1.10"
+    "oxlint": "^1.71.0"
   }
 }
