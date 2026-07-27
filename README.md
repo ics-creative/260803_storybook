@@ -35,10 +35,8 @@ npm run build
 
 ```
 dist/
-  index.html            # 入口（リンク一覧）
+  index.html            # リンク一覧
   app/                  # 本編アプリ
   storybook/            # 本編 Storybook
   storybook-patterns/   # パターン用 Storybook
 ```
-
-相対パス（`base: './'`）で出力するため、GitHub Pages などでもディレクトリ構成を保てば動作します。
