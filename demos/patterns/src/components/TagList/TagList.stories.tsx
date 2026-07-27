@@ -72,6 +72,7 @@ export const SortOrder: Story = {
   },
 };
 
+/** 0件の表示 */
 export const Empty: Story = {
   args: {
     tags: [],

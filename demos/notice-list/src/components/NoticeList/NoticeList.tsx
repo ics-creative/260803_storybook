@@ -1,15 +1,21 @@
 export type Notice = {
+  /** 管理用のID */
   id: string;
+  /** 公開日 */
   publishedAt: string;
+  /** タイトル */
   title: string;
 };
 
 export type NoticeListProps = {
+  /** お知らせの一覧 */
   notices: Notice[];
+  /** 読み込み中の表示に切り替える */
   isLoading?: boolean;
 };
 
 export function NoticeList({ notices, isLoading = false }: NoticeListProps) {
+  // 読み込み中はスケルトンを表示する
   if (isLoading) {
     return (
       <ul className="notice-list" aria-busy="true" aria-label="読み込み中">

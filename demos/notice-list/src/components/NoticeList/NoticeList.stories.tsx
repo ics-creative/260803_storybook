@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { NoticeList } from "./NoticeList";
 import "./NoticeList.css";
 
+// Storiesの対象コンポーネントを指定する
 const meta = {
   component: NoticeList,
 } satisfies Meta<typeof NoticeList>;
@@ -9,6 +10,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
+// 長さの違うタイトルを混ぜたサンプルデータ
 const sampleNotices = [
   {
     id: "1",
@@ -28,12 +30,14 @@ const sampleNotices = [
   },
 ];
 
+// 基準となる表示
 export const Default: Story = {
   args: {
     notices: sampleNotices,
   },
 };
 
+// 読み込み中の表示
 export const Loading: Story = {
   args: {
     notices: [],
@@ -41,12 +45,14 @@ export const Loading: Story = {
   },
 };
 
+// 0件の表示
 export const Empty: Story = {
   args: {
     notices: [],
   },
 };
 
+// 件数が多く、スクロールが発生する表示
 export const Scroll: Story = {
   args: {
     notices: Array.from({ length: 40 }, (_, index) => ({
