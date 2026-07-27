@@ -1,0 +1,80 @@
+.article-ranking {
+  width: 600px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 1px solid #d0d7de;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.article-ranking__item {
+  display: grid;
+  grid-template-columns: 28px 1fr auto;
+  gap: 12px;
+  align-items: center;
+  padding: 10px 16px;
+  border-bottom: 1px solid #eef1f4;
+}
+
+.article-ranking__item:last-child {
+  border-bottom: none;
+}
+
+.article-ranking__rank {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  color: #57606a;
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+  border-radius: 50%;
+  background: #f6f8fa;
+}
+
+.article-ranking__rank--gold {
+  color: #6b4c00;
+  font-weight: 700;
+  background: #ffe07d;
+}
+
+.article-ranking__rank--silver {
+  color: #3d4349;
+  font-weight: 700;
+  background: #dde3e9;
+}
+
+.article-ranking__rank--bronze {
+  color: #6b3b12;
+  font-weight: 700;
+  background: #eccaa8;
+}
+
+.article-ranking__title {
+  overflow: hidden;
+  color: #1f2328;
+  font-size: 15px;
+  line-height: 1.5;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.article-ranking__count {
+  color: #57606a;
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.article-ranking__empty {
+  width: 600px;
+  margin: 0;
+  padding: 24px 16px;
+  color: #57606a;
+  font-size: 14px;
+  text-align: center;
+  border: 1px dashed #d0d7de;
+  border-radius: 8px;
+  background: #f6f8fa;
+}
