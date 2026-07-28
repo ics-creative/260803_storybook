@@ -15,12 +15,12 @@ const sampleNotices = [
   {
     id: "1",
     publishedAt: "2026-08-01",
-    title: "休館",
+    title: "夏季休業のお知らせ",
   },
   {
     id: "2",
     publishedAt: "2026-07-28",
-    title: "夏季休業のお知らせ",
+    title: "ウェブサイトメンテナンスのお知らせ",
   },
   {
     id: "3",
