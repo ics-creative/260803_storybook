@@ -1,0 +1,64 @@
+.side-menu {
+  width: 160px;
+  padding: 8px;
+  border: 1px solid #d0d7de;
+  border-radius: 8px;
+  background: #fff;
+
+  /* 長い語でも突き抜けないようにする */
+  overflow-wrap: anywhere;
+  word-break: normal;
+  line-break: strict;
+}
+
+.side-menu__list {
+  display: grid;
+  gap: 2px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.side-menu__link {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 8px 10px;
+  color: #1f2328;
+  font-size: 14px;
+  line-height: 1.5;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.side-menu__link:hover {
+  background: #f6f8fa;
+}
+
+.side-menu__link[aria-current="page"] {
+  color: #0b57d0;
+  font-weight: 600;
+  background: #eef4ff;
+}
+
+.side-menu__icon {
+  flex: 0 0 auto;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  background: #8c959f;
+}
+
+.side-menu__link[aria-current="page"] .side-menu__icon {
+  background: #0b57d0;
+}
+
+.side-menu__label {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+/* ラベルが伸びてもバッジは潰さない */
+.side-menu__link .notification-badge {
+  flex: 0 0 auto;
+}
