@@ -1,4 +1,4 @@
-# 260803_storybook
+# 260806_storybook
 
 Vite + React のお知らせ一覧（本編）と、Stories に残すパターン例（人気記事ランキング・通知バッジ）のサンプルです。
 
